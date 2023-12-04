@@ -11,6 +11,32 @@
     --social-media-icon-padding: var(--social-media-icon-padding-y) var(--social-media-icon-padding-x) var(--social-media-icon-padding-y) var(--social-media-icon-padding-x)
 }
 
+@keyframes neon-pulsate {
+    100% {
+        text-shadow:
+            0 0 7px var(--neon-primary-color),
+            0 0 10px var(--neon-primary-color),
+            0 0 21px var(--neon-primary-color),
+            0 0 15px var(--neon-secondary-color),
+            0 0 30px var(--neon-secondary-color),
+            0 0 45px var(--neon-secondary-color),
+            0 0 50px var(--neon-secondary-color),
+            0 0 70px var(--neon-secondary-color);
+    }
+
+    0% {
+        text-shadow:
+            0 0 2px var(--neon-primary-color),
+            0 0 3px var(--neon-primary-color),
+            0 0 7px var(--neon-primary-color),
+            0 0 6px var(--neon-secondary-color),
+            0 0 9px var(--neon-secondary-color),
+            0 0 7px var(--neon-secondary-color),
+            0 0 8px var(--neon-secondary-color),
+            0 0 12px var(--neon-secondary-color);
+    }
+}
+
 * {
     padding: 0;
     color: var(--main-txt-color);
@@ -34,15 +60,7 @@ h1 {
     font-size: 4em;
     margin: 0;
     color: var(--neon-txt-color);
-    text-shadow:
-        0 0 7px var(--neon-primary-color),
-        0 0 10px var(--neon-primary-color),
-        0 0 21px var(--neon-primary-color),
-        0 0 15px var(--neon-secondary-color),
-        0 0 30px var(--neon-secondary-color),
-        0 0 45px var(--neon-secondary-color),
-        0 0 50px var(--neon-secondary-color),
-        0 0 70px var(--neon-secondary-color);
+    animation: neon-pulsate 2.5s infinite alternate;
 }
 
 header * {
@@ -69,8 +87,8 @@ section {
 }
 
 h2 {
-    text-decoration: underline;
     margin-top: 2em;
+    border-bottom: 2px solid var(--main-txt-color);
 }
 
 .social-media-icon {
@@ -92,4 +110,17 @@ h2 {
 .social-media-icon i:hover {
     background-color: var(--main-txt-color);
     color: var(--main-bg-color);
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 1.5em;
+    font-size: 0.8em;
+    line-height: 1em;
+    width: 100%;
+    color: white;
+    background: black;
 }
