@@ -1,0 +1,95 @@
+:root {
+    --main-bg-color: rgb(40, 40, 40);
+    --header-bg-color: rgb(32, 32, 32);
+    --main-txt-color: rgb(29, 233, 182);
+    --header-height: 150px;
+    --neon-txt-color: #fff;
+    --neon-primary-color: rgba(255, 255, 255, 0.8);
+    --neon-secondary-color: rgba(29, 233, 182, 0.7);
+    --social-media-icon-padding-y: 0px;
+    --social-media-icon-padding-x: 3px;
+    --social-media-icon-padding: var(--social-media-icon-padding-y) var(--social-media-icon-padding-x) var(--social-media-icon-padding-y) var(--social-media-icon-padding-x)
+}
+
+* {
+    padding: 0;
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-color);
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 7px 20px 7px black;
+}
+
+header,
+header img {
+    height: var(--header-height);
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0;
+    color: var(--neon-txt-color);
+    text-shadow:
+        0 0 7px var(--neon-primary-color),
+        0 0 10px var(--neon-primary-color),
+        0 0 21px var(--neon-primary-color),
+        0 0 15px var(--neon-secondary-color),
+        0 0 30px var(--neon-secondary-color),
+        0 0 45px var(--neon-secondary-color),
+        0 0 50px var(--neon-secondary-color),
+        0 0 70px var(--neon-secondary-color);
+}
+
+header * {
+    background-color: var(--header-bg-color);
+}
+
+main {
+    height: 100vh;
+    overflow-y: hidden;
+    background-image: url("./images/baner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main>.container {
+    margin-top: 7em;
+    padding-bottom: 4em;
+    box-shadow: 1px 2px 20px black;
+}
+
+section {
+    margin: 0 1em 0 1em;
+}
+
+h2 {
+    text-decoration: underline;
+    margin-top: 2em;
+}
+
+.social-media-icon {
+    font-size: 2rem;
+    text-decoration: none;
+    width: 2rem;
+    height: auto;
+}
+
+.social-media-icon:not(:first-child) {
+    margin-left: 1em;
+}
+
+.social-media-icon i {
+    border-radius: 10px;
+    padding: var(--social-media-icon-padding);
+}
+
+.social-media-icon i:hover {
+    background-color: var(--main-txt-color);
+    color: var(--main-bg-color);
+}
